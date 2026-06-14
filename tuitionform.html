@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    .bg {
+        background-color:white;
+        color: rgb(9, 9, 9);
+        gap: 10px;
+        font-size: large;
+    }
+</style>
+
+<body class="bg text-center p-5">
+    <h1 class="text-center" style="color:rgb(40, 21, 149); padding: 20px;">Admission Inquiry Form</h1>
+    <form onsubmit="return validate()">
+        Enter student name: <input type="text" id="name"><br><br>
+        Class/Standard: <input type="text" id="classStandard"><br><br>
+        Enter parent's mobile number: <input type="text" id="mobileNumber"><br><br>
+        <button type="submit" class="btn btn-primary ">Register Now</button>
+    </form>
+    <script>
+        function validate() {
+            let name = document.getElementById("name").value;
+            let classStd = document.getElementById("classStandard").value;
+            let mobile = document.getElementById("mobileNumber").value;
+            if (name == "" || classStd == "" || mobile == "") {
+                alert("All fields required!");
+                return false;
+            }
+            alert("Registration Successful !");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
